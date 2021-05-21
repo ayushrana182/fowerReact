@@ -51,10 +51,10 @@ const PokemonCard: React.FunctionComponent<
     <Box>
       <Box grid gridTemplateColumns-2 gap-10>
         <Box>
-          <Box textXL fontBold bgBlue400  style={{width:"60%" ,display:"flex", justifyContent:"center"}}> 
+          <Box textXL fontBold bgBlue400  style={{width:"60%" ,display:"flex", justifyContent:"center", marginLeft:"14px"}}> 
             {name.english}
           </Box>
-          <Box textXL fontBold bgRed500 white style={{width:"60%", display:"flex", justifyContent:"center"}}>
+          <Box textXL fontBold bgRed500 white style={{width:"60%", display:"flex", justifyContent:"center", marginLeft:"14px"}}>
             {name.japanese}
           </Box>
         </Box>
@@ -68,16 +68,16 @@ const PokemonCard: React.FunctionComponent<
         </Box>
       </Box>
      
-      <Box textLG mt-10 blue800 fontBold style={{ display:"flex", justifyContent:"center" }} >
-       Type: {type.join(", ")}
+      <Box textLG mt-10 red300 fontBold style={{ display:"flex", justifyContent:"flex-start", marginLeft:"14px" }} >
+      Type: {type.join(", ")}
       </Box>
       <Box grid gridTemplateColumns-2 gap-10 ml-20 mt-10>
         {Object.keys(base).map((k) => (
           <React.Fragment key={k}>
-            <Box textSM fontBold>
+            <Box textSM fontBold bgBlue300 style={{width: "80%" , display:"flex", justifyContent:"center" }}>
               {k}
             </Box>
-            <Box textSM bgBlue300 white style={{width: "80%" , display:"flex", justifyContent:"center" }}>{base[k]}</Box>
+            <Box textSM bgBlue300 style={{width: "80%" , display:"flex", justifyContent:"center" }}>{base[k]}</Box>
           </React.Fragment>
         ))}
       </Box>
